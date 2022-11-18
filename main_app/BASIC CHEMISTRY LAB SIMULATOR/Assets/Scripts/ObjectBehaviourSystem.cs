@@ -18,6 +18,13 @@ public class ObjectBehaviourSystem : MonoBehaviour
         _offColor = _model.material.color;
     }
 
+    private void Update()
+    {
+        if (this.GetComponent<WaterBehaviourSystem>())
+        {
+            objectData = "Water - " + this.GetComponent<WaterBehaviourSystem>().waterVolume + "Liter(s)";
+        }
+    }
     public void _enableGhostMode()
     {
         Color color = _model.material.color;

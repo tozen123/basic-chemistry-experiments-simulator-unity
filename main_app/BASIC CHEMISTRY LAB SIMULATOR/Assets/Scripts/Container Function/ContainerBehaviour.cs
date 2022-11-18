@@ -57,10 +57,10 @@ public class ContainerBehaviour : MonoBehaviour
             */
             if (containingPlacement.childCount == 1)
             {
-                _objectBehaviourSystem.objectData = "Container with " + containingPlacement.GetChild(0).gameObject.GetComponent<ObjectBehaviourSystem>().objectId;
+                _objectBehaviourSystem.objectData = "Container with " + containingPlacement.GetChild(0).gameObject.GetComponent<ObjectBehaviourSystem>().objectData;
             } else if (containingPlacement.childCount == 2)
             {
-                _objectBehaviourSystem.objectData = "Container with " + containingPlacement.GetChild(0).gameObject.GetComponent<ObjectBehaviourSystem>().objectId + " And " + containingPlacement.GetChild(1).gameObject.GetComponent<ObjectBehaviourSystem>().objectId;
+                _objectBehaviourSystem.objectData = "Container with " + containingPlacement.GetChild(0).gameObject.GetComponent<ObjectBehaviourSystem>().objectData + " And " + containingPlacement.GetChild(1).gameObject.GetComponent<ObjectBehaviourSystem>().objectData;
             }
            
         }

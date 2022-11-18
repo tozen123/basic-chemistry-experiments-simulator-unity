@@ -844,7 +844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &71374277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,7 +1502,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 200487477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1501748446}
+        m_TargetAssemblyTypeName: SinkSystem, Assembly-CSharp
+        m_MethodName: doneSink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &200487477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1711,7 +1723,7 @@ MonoBehaviour:
   _offColor: {r: 0, g: 0, b: 0, a: 0}
   isChemical: 1
   objectId: KunwareChemical
-  objectData: KunwareChemical - 1 gram
+  objectData: KunwareChemical
 --- !u!65 &313804541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5766,6 +5778,7 @@ MonoBehaviour:
   waterfill_liters: 0
   sink_fill_intensity: 0.5
   ContainerInTheSink: {fileID: 0}
+  waterPrefab: {fileID: 449637808698570656, guid: 6bc35a08533afa94fb01a4a4911759e1, type: 3}
   _playerInteractionController: {fileID: 1052361309}
 --- !u!1 &1532327513
 GameObject:
