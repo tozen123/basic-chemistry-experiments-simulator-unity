@@ -13,6 +13,7 @@ public class SinkSystem : MonoBehaviour
     public float sink_fill_intensity;
 
     public GameObject ContainerInTheSink;
+    public GameObject waterPrefab;
 
     public PlayerInteractionController _playerInteractionController;
     void Start()
@@ -48,12 +49,28 @@ public class SinkSystem : MonoBehaviour
 
     public void doneSink()
     {
+        GameObject water = Instantiate(waterPrefab, transform.position + new Vector3(0f, 0.8f, 0f), Quaternion.identity);
+        water.GetComponent<WaterBehaviourSystem>().waterVolume = waterfill_liters;
 
+        stopWindowRender();
+        resetData();
+        //reset data
     }
 
     public void cancelSink()
     {
+        //reset data
+        stopWindowRender();
+        resetData();
+    }
+
+    private void stopWindowRender()
+    {
         _playerInteractionController.unFreezeGame();
         _playerInteractionController._interactableSystemSinkTableCanvas.SetActive(false);
+    }
+    private void resetData()
+    {
+        waterfill_liters = 0;
     }
 }
