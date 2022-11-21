@@ -14,8 +14,8 @@ TagManager:
   - PlaceableObject
   - Ground
   - Interactable
-  - NoCastShadows
-  - 
+  - Hand
+  - Objects
   - 
   - 
   - 
