@@ -93,7 +93,7 @@ public class PlayerInteractionController : MonoBehaviour
         objGhost.transform.parent = holdPosReference.transform;
         objGhost.transform.position = holdPosReference.transform.position;
 
-        if (sighted.GetComponent<ObjectBehaviourSystem>().objectId == "Container")
+        if (sighted.GetComponent<ObjectBehaviourSystem>().objectId == "Container" || sighted.GetComponent<ObjectBehaviourSystem>().objectId == "Beaker")
         {
             foreach (Transform t in sighted.transform.GetChild(1).GetComponentsInChildren<Transform>())
             {
@@ -151,9 +151,9 @@ public class PlayerInteractionController : MonoBehaviour
                                     sighted.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().useGravity = false;
                                     sighted.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = false;
                                 }
-                            } 
+                            }
 
-                            
+
                         }
                         else
                         {
@@ -166,7 +166,7 @@ public class PlayerInteractionController : MonoBehaviour
                 } else // if may kapit ung player
                 {
                     // if yung kapit is container
-                    if(onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Container")
+                    if (onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Container" || onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Beaker")
                     {
                         
                         pickUpCanvastext.text = "Press F to Put it on the " + onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId;
@@ -180,7 +180,7 @@ public class PlayerInteractionController : MonoBehaviour
                             // check if ung container is may laman
                             if (!onHoldObject.GetComponent<ContainerBehaviour>().isContainingSomething) // if walang laman ung kapit
                             {
-                                if(sighted.GetComponent<ObjectBehaviourSystem>().objectId == "Container")
+                                if(sighted.GetComponent<ObjectBehaviourSystem>().objectId == "Container" || sighted.GetComponent<ObjectBehaviourSystem>().objectId == "Beaker")
                                 {
                                     GameObject _warningCanvas = Instantiate(canvasWarning, hit.transform.position, Quaternion.identity);
                                     canvasWarningText.text = "INTERACTION_ERROR_3: You can not pick up container with container";
@@ -215,7 +215,7 @@ public class PlayerInteractionController : MonoBehaviour
                                 canvasWarningText.text = "INTERACTION_ERROR_4: You can not pick up chemical with container full! ";
                                 if (onHoldObject.GetComponent<ContainerBehaviour>().isContainingSomething)
                                 {
-                                    if(sighted.GetComponent<ObjectBehaviourSystem>().objectId == "Container")
+                                    if(sighted.GetComponent<ObjectBehaviourSystem>().objectId == "Container" || sighted.GetComponent<ObjectBehaviourSystem>().objectId == "Beaker")
                                     {
                                         if (sighted.GetComponent<ContainerBehaviour>().isContainingSomething)
                                         {
@@ -360,7 +360,7 @@ public class PlayerInteractionController : MonoBehaviour
         if(onHoldObject != null)
         {
             //Mag aactivate lang ang container and sink interaction if may kapit na container ung player
-            if (onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Container")
+            if (onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Container" || onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Beaker")
             {
                 if (_interactableSystem.GetComponent<InteractableSystemBehaviour>().interactableSystemID == "Sink")
                 {
