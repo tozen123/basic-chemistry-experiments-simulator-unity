@@ -7,6 +7,7 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] private float sensX = 100f;
     [SerializeField] private float sensY = 100f;
     Camera cam;
+    public Camera otherCamera;
 
     float mouseX;
     float mouseY;
@@ -32,10 +33,12 @@ public class PlayerCameraController : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             cam.fieldOfView = 40f;
+            otherCamera.fieldOfView = 40f;
         }
         if (Input.GetMouseButtonUp(1))
         {
             cam.fieldOfView = 80f;
+            otherCamera.fieldOfView = 80f;
         }
 
         if (!isGameFreeze)
