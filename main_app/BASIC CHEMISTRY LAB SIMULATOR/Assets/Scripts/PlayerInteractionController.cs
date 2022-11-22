@@ -386,9 +386,9 @@ public class PlayerInteractionController : MonoBehaviour
                 Debug.Log("Cabinet");
                 InteractChemicalCabinet();
 
-            } else if (_interactableSystem.GetComponent<InteractableSystemBehaviour>().interactableSystemID == "Lab Equipments Cabinet")
+            } else if (_interactableSystem.GetComponent<InteractableSystemBehaviour>().interactableSystemID == "Lab Equipments Shelves")
             {
-                ChangeUIText(_interactableSystemUIText, "Lab Equipments Cabinet");
+                ChangeUIText(_interactableSystemUIText, "Lab Equipments Shelves");
 
                 interactableSystemCanvas.SetActive(true);
 
