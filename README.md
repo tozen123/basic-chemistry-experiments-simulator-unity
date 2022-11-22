@@ -16,5 +16,6 @@ Minor Update: November 21, 2022
 Major Update: November 22, 2022
   - Implementation of 3D Models. Made by Marvin Glyn C. Peña 
   - Laboratory Installed.
+  - Graphics Upgrade [Improvement of Post Processing]
   - WIP Reaction and Sink Logic
   - WIP Chemical Cabinet Logic
