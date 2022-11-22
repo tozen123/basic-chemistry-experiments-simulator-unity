@@ -8,7 +8,7 @@ public class ChemicalReactionLogic : MonoBehaviour
     public GameObject smokeParticle;
     public GameObject splashParticle;
 
-    public float lifeTime = 5f; // 1 gram reaction time
+    public float lifeTime = 20f; // 1 gram reaction time
     void Start()
     {
         
@@ -28,6 +28,9 @@ public class ChemicalReactionLogic : MonoBehaviour
                 Debug.Log("REACTED!");
                 GameObject smokeParticleGO = Instantiate(smokeParticle, transform.position, Quaternion.identity);
                 GameObject sparkParticleGO = Instantiate(sparkParticle, transform.position, Quaternion.identity);
+
+                //var sz = smokeParticleGO.transform.GetChild(0).GetComponent<ParticleSystem>().main.startSize;
+                //sz = new ParticleSystem.MinMaxCurve(0.5f, 2f);
 
                 smokeParticleGO.transform.position = Vector3.MoveTowards(smokeParticleGO.transform.position, transform.position, 6 * Time.deltaTime);
                 sparkParticleGO.transform.position = Vector3.MoveTowards(sparkParticleGO.transform.position, transform.position, 6 * Time.deltaTime);

@@ -320,6 +320,25 @@ public class PlayerInteractionController : MonoBehaviour
                     _object.GetComponent<Rigidbody>().isKinematic = false;
                     _object.GetComponent<BoxCollider>().enabled = true;
 
+
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+                    //
+                    // To fix the Bug where the pre placement object offset create logic due to the trigger collision! 
+                    //_object.GetComponent<BoxCollider>().isTrigger = true;
+                    //
+                    //
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+                    // UPDATE THIS PART!!
+
                     _object.GetComponent<ObjectBehaviourSystem>()._disableGhostMode();
 
                     holdingUICanvas.SetActive(false);

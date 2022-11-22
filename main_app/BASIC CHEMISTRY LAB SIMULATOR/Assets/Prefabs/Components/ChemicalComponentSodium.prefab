@@ -116,6 +116,7 @@ MonoBehaviour:
   sparkParticle: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
   smokeParticle: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
   splashParticle: {fileID: 763267279602489683, guid: 5cd1e99acd0259b4abbf7e0a703b2b47, type: 3}
+  lifeTime: 20
 --- !u!65 &6184887642118413066
 BoxCollider:
   m_ObjectHideFlags: 0
