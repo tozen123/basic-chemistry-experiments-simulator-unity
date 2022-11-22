@@ -12,3 +12,10 @@ Minor Update: November 21, 2022
   - Fixed Camera Clipping [Hands and Onhand-Objects clips through tables and cabinets] 
   - UI Placement Fixed
   - WIP Reaction and Sink Logic
+ 
+Major Update: November 22, 2022
+  - Implementation of 3D Models. Made by Marvin Glyn C. Peña 
+  - Laboratory Installed.
+  - Graphics Upgrade [Improvement of Post Processing]
+  - WIP Reaction and Sink Logic
+  - WIP Chemical Cabinet Logic
