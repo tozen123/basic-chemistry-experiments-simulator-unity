@@ -2,6 +2,12 @@
 
 Basic Chemistry Experiments Simulator is a simulation of basic chemistry experiments where it is set in a interactive 3D world. It is currently being developed in Unity Engine by the Group TECHNO.
 
+To successfully run this Source Project File. Must install the following assets:
+1. QuickOutline [Free]
+2. TextMeshPro [Built-In]
+
+UPDATE LOGS: 
+
 Major Update: November 18, 2022
   - Pouring and Putting other object in other container is now working.
   - New Task
