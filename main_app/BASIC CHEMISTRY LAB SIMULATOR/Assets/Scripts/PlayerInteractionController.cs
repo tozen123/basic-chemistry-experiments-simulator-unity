@@ -199,7 +199,7 @@ public class PlayerInteractionController : MonoBehaviour
                                     sighted.GetComponent<Rigidbody>().useGravity = false;
 
                                     //add randomizer
-                                    float rander = Random.Range(-0.2f, 0.2f);
+                                    float rander = Random.Range(-0.1f, 0.1f);
 
                                     //Debug.Log(onHoldObject.transform.GetChild(0).transform.position + new Vector3(rander, 0f, rander));
                                     sighted.transform.position = onHoldObject.transform.GetChild(0).transform.position + new Vector3(rander, 0f, rander);
@@ -226,7 +226,7 @@ public class PlayerInteractionController : MonoBehaviour
                                             Debug.Log(sighted.transform.GetChild(0).transform.gameObject);
 
                                             // add randomization 
-                                            float rander = Random.Range(-0.2f, 0.2f);
+                                            float rander = Random.Range(-0.1f, 0.1f);
 
                                             onHoldObject.transform.GetChild(0).GetChild(0).transform.position = sighted.transform.GetChild(0).transform.position + new Vector3(rander, 0f, rander);
                                             onHoldObject.transform.GetChild(0).GetChild(0).transform.parent = sighted.transform.GetChild(0).transform;

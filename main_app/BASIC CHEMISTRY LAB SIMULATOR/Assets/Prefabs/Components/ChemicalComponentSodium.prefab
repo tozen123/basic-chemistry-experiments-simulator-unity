@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6111770182196734803}
   - component: {fileID: 6111770182196734801}
   - component: {fileID: 6111770182196734802}
+  - component: {fileID: 4954309251933968918}
+  - component: {fileID: 6184887642118413066}
   m_Layer: 10
   m_Name: ChemicalComponentSodium
   m_TagString: Untagged
@@ -99,6 +101,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &4954309251933968918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111770182196734814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb280f6e2a7b5bc49b4637ef01457e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkParticle: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
+  smokeParticle: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
+  splashParticle: {fileID: 763267279602489683, guid: 5cd1e99acd0259b4abbf7e0a703b2b47, type: 3}
+--- !u!65 &6184887642118413066
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111770182196734814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39417022, y: 0.09759906, z: 0.3610565}
+  m_Center: {x: -0.007442914, y: 0.031520464, z: 0.018269777}
 --- !u!1001 &6111770180612725085
 PrefabInstance:
   m_ObjectHideFlags: 0
