@@ -8,7 +8,7 @@ public class PlayerInteractableSystems : MonoBehaviour
     [SerializeField] private PlayerInteractionController _playerInteractionController;
     public GameObject _generatedSpawnTextEffect;
     public TextMeshProUGUI _generatedSpawnTextEffectText;
-
+    public Transform releasePoint;
     public Vector3 _spawnOffset;
 
     void Start()
@@ -25,7 +25,7 @@ public class PlayerInteractableSystems : MonoBehaviour
 
     public void GenerateLabEquipments(GameObject labEquipment)
     {
-        GameObject obj = Instantiate(labEquipment, transform.position + _spawnOffset, Quaternion.identity);
+        GameObject obj = Instantiate(labEquipment, releasePoint.transform.position, Quaternion.identity);
 
         string labEquipmentTextName;
         labEquipmentTextName = labEquipment.GetComponent<ObjectBehaviourSystem>().objectId;
