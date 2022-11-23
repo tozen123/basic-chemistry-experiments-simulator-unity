@@ -18,7 +18,7 @@ public class ContainerBehaviour : MonoBehaviour
     {
         
     }
-    /*
+    /*//containing[i] = containingPlacement.GetChild(i).gameObject;
      * fix the looping error
      * 
      */
@@ -31,11 +31,10 @@ public class ContainerBehaviour : MonoBehaviour
             isContainingSomething = true;
             for (int i = 0; i < containingPlacement.childCount; i++)
             {
-                //containing[i] = containingPlacement.GetChild(i).gameObject;
-                //dataNames += " " + containingPlacement.GetChild(i).gameObject.GetComponent<ObjectBehaviourSystem>().objectId;
-                
-                //Debug.Log(containingPlacement.GetChild(i).gameObject);
-                //Debug.Log(i);
+                dataNames += " " + containingPlacement.GetChild(i).gameObject.GetComponent<ObjectBehaviourSystem>().objectId;
+
+                //Debug.Log(containingPlacement.GetChild(i).gameObject); // Tracking indexed object
+                //Debug.Log(i); // Tracked indexed object Name
             }
         }
         else
@@ -57,10 +56,10 @@ public class ContainerBehaviour : MonoBehaviour
             */
             if (containingPlacement.childCount == 1)
             {
-                _objectBehaviourSystem.objectData = "Container with " + containingPlacement.GetChild(0).gameObject.GetComponent<ObjectBehaviourSystem>().objectData;
+                _objectBehaviourSystem.objectData = "Beaker with " + containingPlacement.GetChild(0).gameObject.GetComponent<ObjectBehaviourSystem>().objectData;
             } else if (containingPlacement.childCount == 2)
             {
-                _objectBehaviourSystem.objectData = "Container with " + containingPlacement.GetChild(0).gameObject.GetComponent<ObjectBehaviourSystem>().objectData + " And " + containingPlacement.GetChild(1).gameObject.GetComponent<ObjectBehaviourSystem>().objectData;
+                _objectBehaviourSystem.objectData = "Beaker with " + containingPlacement.GetChild(0).gameObject.GetComponent<ObjectBehaviourSystem>().objectData + " And " + containingPlacement.GetChild(1).gameObject.GetComponent<ObjectBehaviourSystem>().objectData;
             }
            
         }

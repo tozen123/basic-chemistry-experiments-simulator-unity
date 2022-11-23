@@ -6255,8 +6255,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 287.83624, y: -265.38913}
-  m_SizeDelta: {x: 412.372, y: 128.777}
+  m_AnchoredPosition: {x: 217, y: -190}
+  m_SizeDelta: {x: 311.427, y: 121.613}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &805983520
 MonoBehaviour:
@@ -6310,12 +6310,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.75
+  m_fontSize: 19.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 12
-  m_fontSizeMax: 26
+  m_fontSizeMax: 21
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -7722,6 +7722,7 @@ GameObject:
   - component: {fileID: 1052361308}
   - component: {fileID: 1052361309}
   - component: {fileID: 1052361310}
+  - component: {fileID: 1052361311}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -7829,6 +7830,9 @@ MonoBehaviour:
   _interactableSystemChemicalCabinetCanvas: {fileID: 307422328}
   _interactableSystemLabEquipmentsCabinetCanvas: {fileID: 1555190985}
   _interactableSystemSinkTableCanvas: {fileID: 71374276}
+  MainAudioSource: {fileID: 1052361311}
+  openingDoorCabinetAudioClip: {fileID: 8300000, guid: 907f2c03894bc774095e58648ae01e37, type: 3}
+  beakerPickUpAudioClip: {fileID: 8300000, guid: 9577100726c108e4b8032c8a4cf4a983, type: 3}
 --- !u!114 &1052361310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7846,6 +7850,102 @@ MonoBehaviour:
   _generatedSpawnTextEffectText: {fileID: 0}
   releasePoint: {fileID: 638663407}
   _spawnOffset: {x: 0, y: 0, z: 2}
+--- !u!82 &1052361311
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052361304}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1075153584
 GameObject:
   m_ObjectHideFlags: 0
@@ -8252,8 +8352,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 340, y: -220}
-  m_SizeDelta: {x: 618.9, y: 400}
+  m_AnchoredPosition: {x: 271.69495, y: -139.47195}
+  m_SizeDelta: {x: 532.289, y: 266.945}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150129388
 MonoBehaviour:
@@ -8990,8 +9090,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 275.217, y: -55.48}
-  m_SizeDelta: {x: 387.133, y: 50}
+  m_AnchoredPosition: {x: 223.99994, y: -43.99997}
+  m_SizeDelta: {x: 265.441, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222630197
 MonoBehaviour:
@@ -9040,7 +9140,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
+  m_fontSize: 26.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11247,8 +11347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 290.70502, y: -123}
-  m_SizeDelta: {x: 418.11, y: 50}
+  m_AnchoredPosition: {x: 233.99994, y: -107.99997}
+  m_SizeDelta: {x: 300.07, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1613624328
 MonoBehaviour:
@@ -11270,7 +11370,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The game might have game breaking bugs or errors as it is under development. '
+  m_text: 'The simulator might have system breaking bugs or errors as it is under
+    development. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11297,12 +11398,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 21
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 12
-  m_fontSizeMax: 24
+  m_fontSizeMax: 21
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256

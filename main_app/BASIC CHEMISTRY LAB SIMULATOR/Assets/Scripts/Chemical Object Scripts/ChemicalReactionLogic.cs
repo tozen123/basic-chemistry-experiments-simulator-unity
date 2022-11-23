@@ -8,7 +8,7 @@ public class ChemicalReactionLogic : MonoBehaviour
     public GameObject smokeParticle;
     public GameObject splashParticle;
 
-    public float lifeTime = 20f; // 1 gram reaction time
+    public float lifeTime = 2f; // 1 gram reaction time
     void Start()
     {
         
@@ -50,8 +50,9 @@ public class ChemicalReactionLogic : MonoBehaviour
             if (other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water")
             {
                 Debug.Log("REACTING!");
+                float randomPos = Random.Range(-0.02f, 0.02f);
+                this.transform.position = transform.position + new Vector3(randomPos, 0f, randomPos);
 
-                
             }
         }
     }

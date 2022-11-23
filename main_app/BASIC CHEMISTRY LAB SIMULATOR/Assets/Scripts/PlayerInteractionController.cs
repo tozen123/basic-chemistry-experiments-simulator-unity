@@ -51,6 +51,11 @@ public class PlayerInteractionController : MonoBehaviour
 
     [Header("InteractableSystem UI Sink Table Reference")]
     public GameObject _interactableSystemSinkTableCanvas;
+
+    [Header("Sounds")]
+    public AudioSource MainAudioSource;
+    public AudioClip openingDoorCabinetAudioClip;
+    public AudioClip beakerPickUpAudioClip;
     // ---------------------------------------------------------------------------------------------------------------------------//
     // ---------------------------------------------------------------------------------------------------------------------------//
     //
@@ -226,7 +231,7 @@ public class PlayerInteractionController : MonoBehaviour
                                             Debug.Log(sighted.transform.GetChild(0).transform.gameObject);
 
                                             // add randomization 
-                                            float rander = Random.Range(-0.1f, 0.1f);
+                                            float rander = Random.Range(-0.05f, 0.05f);
 
                                             onHoldObject.transform.GetChild(0).GetChild(0).transform.position = sighted.transform.GetChild(0).transform.position + new Vector3(rander, 0f, rander);
                                             onHoldObject.transform.GetChild(0).GetChild(0).transform.parent = sighted.transform.GetChild(0).transform;
@@ -312,6 +317,7 @@ public class PlayerInteractionController : MonoBehaviour
                 if (Input.GetKeyDown("f") || Input.GetMouseButtonDown(0))
                 {
                     //Debug.Log("OBJECT PLACED");
+                    MainAudioSource.PlayOneShot(beakerPickUpAudioClip, 0.35f);
                     _playerAnimControl.notHoldingAnimation();
 
                     _object.transform.position = placementPosition;
@@ -452,6 +458,7 @@ public class PlayerInteractionController : MonoBehaviour
             {
                 FreezeGame();
                 _interactableSystemChemicalCabinetCanvas.SetActive(true);
+                MainAudioSource.PlayOneShot(openingDoorCabinetAudioClip, 0.35f);
             }
         }
     }
