@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6886187379530123058}
   - component: {fileID: 3131126959080721769}
   - component: {fileID: 606230157274349042}
-  - component: {fileID: 8146997653736203083}
+  - component: {fileID: -2489199192278885123}
   m_Layer: 0
   m_Name: ChemicalObject_WATER
   m_TagString: Untagged
@@ -196,8 +196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterVolume: 0
---- !u!65 &8146997653736203083
-BoxCollider:
+--- !u!135 &-2489199192278885123
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -207,8 +207,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4670493, y: 0.14204861, z: 0.36614418}
-  m_Center: {x: -0.005023837, y: 0.012966193, z: 0.005213082}
+  m_Radius: 0.14
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8066057080137488050
 GameObject:
   m_ObjectHideFlags: 0

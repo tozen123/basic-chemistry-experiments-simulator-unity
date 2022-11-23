@@ -17,7 +17,9 @@ public class ChemicalReactionLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // size determinator
+
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -50,7 +52,7 @@ public class ChemicalReactionLogic : MonoBehaviour
             if (other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water")
             {
                 Debug.Log("REACTING!");
-                float randomPos = Random.Range(-0.02f, 0.02f);
+                float randomPos = Random.Range(-0.01f, 0.01f);
                 this.transform.position = transform.position + new Vector3(randomPos, 0f, randomPos);
 
             }

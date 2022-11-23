@@ -146,15 +146,26 @@ public class PlayerInteractionController : MonoBehaviour
                             sighted.gameObject.GetComponent<Outline>().enabled = false;
                             sighted.GetComponent<ObjectBehaviourSystem>()._enableGhostMode();
                             ObjectPickedUp();
-                            Debug.Log("1");
+
+                            
 
                             if (sighted.transform.GetChild(0))
                             {
                                 if (sighted.transform.GetChild(0).childCount > 0)
                                 {
+                                    Debug.Log("Picking Up");
+
                                     sighted.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = true;
                                     sighted.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().useGravity = false;
                                     sighted.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = false;
+
+                                    /*
+                                    if (sighted.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
+                                    {
+                                        sighted.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().isTrigger = false;
+                                    }
+                                    */
+                                    
                                 }
                             }
 
@@ -194,6 +205,7 @@ public class PlayerInteractionController : MonoBehaviour
                                     return;
                                 } else
                                 {
+
                                     // if pag walang laman ung container pwede sya mag pick up ng mga chemicals
 
                                     sighted = hit.transform.gameObject;
@@ -204,7 +216,7 @@ public class PlayerInteractionController : MonoBehaviour
                                     sighted.GetComponent<Rigidbody>().useGravity = false;
 
                                     //add randomizer
-                                    float rander = Random.Range(-0.1f, 0.1f);
+                                    float rander = Random.Range(-0.02f, 0.02f);
 
                                     //Debug.Log(onHoldObject.transform.GetChild(0).transform.position + new Vector3(rander, 0f, rander));
                                     sighted.transform.position = onHoldObject.transform.GetChild(0).transform.position + new Vector3(rander, 0f, rander);
@@ -213,7 +225,7 @@ public class PlayerInteractionController : MonoBehaviour
 
                                 }
                                 
-                                Debug.Log("2");
+                                
                             }
                             else 
                             {
@@ -226,18 +238,15 @@ public class PlayerInteractionController : MonoBehaviour
                                         {
                                             // pouring one container to another
 
-                                            Debug.Log("3");
+                                            Debug.Log("3 asdasdasd");
                                             Debug.Log(onHoldObject.transform.GetChild(0).GetChild(0).transform.gameObject);
                                             Debug.Log(sighted.transform.GetChild(0).transform.gameObject);
 
                                             // add randomization 
-                                            float rander = Random.Range(-0.05f, 0.05f);
+                                            float rander = Random.Range(-0.02f, 0.02f);
 
                                             onHoldObject.transform.GetChild(0).GetChild(0).transform.position = sighted.transform.GetChild(0).transform.position + new Vector3(rander, 0f, rander);
                                             onHoldObject.transform.GetChild(0).GetChild(0).transform.parent = sighted.transform.GetChild(0).transform;
-                                            
-
-                                            // create function where we can mix two container 
 
                                         }
                                     }
@@ -313,10 +322,86 @@ public class PlayerInteractionController : MonoBehaviour
             {
                 Vector3 placementPosition = new Vector3(Mathf.RoundToInt(hit.point.x), Mathf.RoundToInt(hit.point.y), Mathf.RoundToInt(hit.point.z));
                 _object.transform.position = placementPosition;
+                /*
+                if (onHoldObject.gameObject.GetComponent<ObjectBehaviourSystem>())
+                {
+                    if (onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Beaker")
+                    {
+                        if (onHoldObject.gameObject.transform.GetChild(0).childCount == 1)
+                        {
+                            if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<ObjectBehaviourSystem>())
+                            {
+                                if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
+                                {
+                                    onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().enabled = false;
+                                }
+                            }
+                        } else if (onHoldObject.gameObject.transform.GetChild(0).childCount == 2)
+                        {
+                            if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<ObjectBehaviourSystem>())
+                            {
+                                if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
+                                {
+                                    onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().enabled = false;
+                                }
+                            }
 
+                            if (onHoldObject.transform.GetChild(0).GetChild(1).gameObject)
+                            {
+                                if (onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<ObjectBehaviourSystem>())
+                                {
+                                    if (onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<SphereCollider>())
+                                    {
+                                        onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<SphereCollider>().enabled = false;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                */
                 if (Input.GetKeyDown("f") || Input.GetMouseButtonDown(0))
                 {
-                    //Debug.Log("OBJECT PLACED");
+                    Debug.Log("OBJECT PLACED");
+                    /*
+                    if (onHoldObject.gameObject.GetComponent<ObjectBehaviourSystem>())
+                    {
+                        
+                        if (onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Beaker")
+                        {
+                            if (onHoldObject.gameObject.transform.GetChild(0).childCount == 1)
+                            {
+                                if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<ObjectBehaviourSystem>())
+                                {
+                                    if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
+                                    {
+                                        onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().enabled = true;
+                                    }
+                                }
+                            } else if (onHoldObject.gameObject.transform.GetChild(0).childCount == 2)
+                            {
+                                if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<ObjectBehaviourSystem>())
+                                {
+                                    if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
+                                    {
+                                        onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().enabled = true;
+                                    }
+                                }
+
+                                if (onHoldObject.transform.GetChild(0).GetChild(1).gameObject)
+                                {
+                                    if (onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<ObjectBehaviourSystem>())
+                                    {
+                                        if (onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<SphereCollider>())
+                                        {
+                                            onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<SphereCollider>().enabled = true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                     */
                     MainAudioSource.PlayOneShot(beakerPickUpAudioClip, 0.35f);
                     _playerAnimControl.notHoldingAnimation();
 
@@ -325,26 +410,6 @@ public class PlayerInteractionController : MonoBehaviour
                     onHoldObject = null;
                     _object.GetComponent<Rigidbody>().isKinematic = false;
                     _object.GetComponent<BoxCollider>().enabled = true;
-
-
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-                    //
-                    // To fix the Bug where the pre placement object offset create logic due to the trigger collision! 
-                    //_object.GetComponent<BoxCollider>().isTrigger = true;
-                    //
-                    //
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-                    // UPDATE THIS PART!!
-
                     _object.GetComponent<ObjectBehaviourSystem>()._disableGhostMode();
 
                     holdingUICanvas.SetActive(false);
