@@ -60,3 +60,4 @@ crashlytics-build.properties
 
 # I ADD THIS ONE TO CLEAN
 *.meta
+*.shader
