@@ -25,3 +25,9 @@ Major Update: November 22, 2022
   - Graphics Upgrade [Improvement of Post Processing]
   - WIP Reaction and Sink Logic
   - WIP Chemical Cabinet Logic
+
+Major Update: November 23, 2022
+  - Added couple of sound effects
+  - Reaction Logic Updated
+  - Effects Improved and Updated
+  - Currently fixing trigger Bug where ghost object initiate reaction when target into object that has reaction on it.
