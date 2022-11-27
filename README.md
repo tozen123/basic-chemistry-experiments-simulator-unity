@@ -31,3 +31,6 @@ Major Update: November 23, 2022
   - Reaction Logic Updated
   - Effects Improved and Updated
   - Currently fixing trigger Bug where ghost object initiate reaction when target into object that has reaction on it.
+  
+Major Update: November 27, 2022
+  - Implementation of Main Menu Interface
