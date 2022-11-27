@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3fca31c5c9e83574caeec29f3b93f4b0, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8dac6f77a8f9ff4bb0489b1ef8020e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bobbingSpeed: 0.05
-  bobbingAmount: 0.05
+  bobbingSpeed: 0.03
+  bobbingAmount: 0.03
   midpoint: 1
 --- !u!1 &6454117
 GameObject:
@@ -7824,7 +7824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orientation: {fileID: 343196029}
-  moveSpeed: 6
+  moveSpeed: 5
   groundDrag: 6
 --- !u!114 &1052361308
 MonoBehaviour:
