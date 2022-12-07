@@ -1,6 +1,14 @@
-# basic-chemistry-experiments-simulator-unity
+# Basic Chemistry Experiments Simulator
 
 Basic Chemistry Experiments Simulator is a simulation of basic chemistry experiments where it is set in a interactive 3D world. It is currently being developed in Unity Engine by the Group TECHNO.
+
+# About The Developers:
+  Christian Serwelas            - Lead Developer
+  Wyndel Albos                  - Assistant Developer, Programmer, Quality Assurance and Researcher
+  Kirby Ann Delos Reyes         - Artist, Designer, Quality Assurance and Researcher
+  Marvin Glyn Peña              - Lead Artist
+  Apple Kimberly Calvario       - Assistant Developer, Programmer, Quality Assurance and Researcher
+
 
 To successfully run this Source Project File. Must install the following assets:
 1. QuickOutline [Free]
