@@ -1,6 +1,6 @@
 # Basic Chemistry Experiments Simulator
 
-Basic Chemistry Experiments Simulator is a simulation of basic chemistry experiments where it is set in a interactive 3D world. It is currently being developed in Unity Engine by the Group TECHNO.
+Basic Chemistry Experiments Simulator is a simulation of basic chemistry experiments where it is set in a interactive 3D world in which the user of the simulator can do experiments. With that the experiments or the result of the experiments might not be very accurate relative to real life situation but will give the user an idea on what is happening or the result. It is currently being developed in Unity Engine by the Group TECHNO.
 
 # About The Developers:
   - Christian Serwelas            - Lead Developer
