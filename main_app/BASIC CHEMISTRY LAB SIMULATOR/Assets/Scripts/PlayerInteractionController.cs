@@ -541,6 +541,7 @@ public class PlayerInteractionController : MonoBehaviour
             {
                 FreezeGame();
                 _interactableSystemLabEquipmentsCabinetCanvas.SetActive(true);
+                MainAudioSource.PlayOneShot(openingDoorCabinetAudioClip, 0.35f);
             }
         }
     }
