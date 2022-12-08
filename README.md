@@ -12,11 +12,12 @@ Basic Chemistry Experiments Simulator is a simulation of basic chemistry experim
 # Build Version Download Link
 https://drive.google.com/file/d/1Nb0mJYbqCyPVqYq9DaG52QZZg59HZewe/view?usp=share_link
 
+# Source Project
 To successfully run this Source Project File. Must install the following assets:
 1. QuickOutline [Free]
 2. TextMeshPro [Built-In]
 
-UPDATE LOGS: 
+# UPDATE LOGS
 
 Major Update: November 18, 2022
   - Pouring and Putting other object in other container is now working.
