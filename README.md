@@ -9,6 +9,8 @@ Basic Chemistry Experiments Simulator is a simulation of basic chemistry experim
   - Marvin Glyn Peña              - Lead Artist
   - Apple Kimberly Calvario       - Assistant Developer, Programmer, Quality Assurance and Researcher
 
+# Build Version Download Link
+https://drive.google.com/file/d/1Nb0mJYbqCyPVqYq9DaG52QZZg59HZewe/view?usp=share_link
 
 To successfully run this Source Project File. Must install the following assets:
 1. QuickOutline [Free]
