@@ -41,4 +41,11 @@ Major Update: November 23, 2022
   - Currently fixing trigger Bug where ghost object initiate reaction when target into object that has reaction on it.
   
 Major Update: November 27, 2022
-  - Implementation of Main Menu Interface
+  - Implementation of Main Menu Interface Created by Apple Kimberly Calvario and Wyndel Albos
+  
+Minor Update: December 7, 2022
+  - Upgrade of UI's By Kirby Ann Delos Reyes
+  
+Major Update: December 8, 2022
+  - Bug fixing
+  - Adding functions to settings
