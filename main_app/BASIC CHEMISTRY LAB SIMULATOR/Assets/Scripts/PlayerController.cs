@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform orientation;
 
     [Header("Movement")]
-    [SerializeField] float moveSpeed = 6f;
+    [SerializeField] public float moveSpeed = 6f;
     float movementMultiplier = 10f;
 
     [Header("Drag")]
