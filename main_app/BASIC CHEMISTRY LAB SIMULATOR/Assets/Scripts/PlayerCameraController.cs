@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerCameraController : MonoBehaviour
 {
-    [SerializeField] private float sensX = 100f;
-    [SerializeField] private float sensY = 100f;
+    [SerializeField] public float sensX = 100f;
+    [SerializeField] public float sensY = 100f;
     Camera cam;
     public Camera otherCamera;
 
