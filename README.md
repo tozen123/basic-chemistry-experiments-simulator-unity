@@ -53,3 +53,7 @@ Minor Update: December 7, 2022
 Major Update: December 8, 2022
   - Bug fixing
   - Adding functions to settings
+  
+Minor Update: December 12, 2022
+  - Small Improvement to UI's
+  - Adding Fire Extinguisher Function
