@@ -9,12 +9,15 @@ Basic Chemistry Experiments Simulator is a simulation of basic chemistry experim
   - Marvin Glyn Peña              - Lead Artist
   - Apple Kimberly Calvario       - Assistant Developer, Programmer, Quality Assurance and Researcher
 
+# Build Version Download Link
+https://drive.google.com/file/d/1Nb0mJYbqCyPVqYq9DaG52QZZg59HZewe/view?usp=share_link
 
+# Source Project
 To successfully run this Source Project File. Must install the following assets:
 1. QuickOutline [Free]
 2. TextMeshPro [Built-In]
 
-UPDATE LOGS: 
+# UPDATE LOGS
 
 Major Update: November 18, 2022
   - Pouring and Putting other object in other container is now working.
@@ -41,4 +44,11 @@ Major Update: November 23, 2022
   - Currently fixing trigger Bug where ghost object initiate reaction when target into object that has reaction on it.
   
 Major Update: November 27, 2022
-  - Implementation of Main Menu Interface
+  - Implementation of Main Menu Interface Created by Apple Kimberly Calvario and Wyndel Albos
+  
+Minor Update: December 7, 2022
+  - Upgrade of UI's By Kirby Ann Delos Reyes
+  
+Major Update: December 8, 2022
+  - Bug fixing
+  - Adding functions to settings
