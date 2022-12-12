@@ -9,6 +9,7 @@ public class ObjectBehaviourSystem : MonoBehaviour
     [SerializeField] private Color _offColor;
 
     public bool isChemical;
+    public bool isUsableObject;
 
     public string objectId;
     public string objectData;
