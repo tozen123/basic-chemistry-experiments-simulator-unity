@@ -10,6 +10,7 @@ Basic Chemistry Experiments Simulator is a simulation of basic chemistry experim
   - Apple Kimberly Calvario       - Assistant Developer, Programmer, Quality Assurance and Researcher
 
 # Build Version Download Link
+The link of the executable (.exe) version. Must have a file that can uncompressed a .rar file
 https://drive.google.com/file/d/1Nb0mJYbqCyPVqYq9DaG52QZZg59HZewe/view?usp=share_link
 
 # Source Project
