@@ -50,7 +50,7 @@ MonoBehaviour:
   _offColor: {r: 0, g: 0, b: 0, a: 0}
   isChemical: 0
   objectId: Fire Extinguisher
-  objectData: Fire Extinguisher
+  objectData: Great Tool To Fight FIREEE!
 --- !u!65 &1666174602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62,8 +62,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.58425194, y: 1.8476152, z: 0.5500256}
-  m_Center: {x: -0.052146226, y: 0.778399, z: 0.022586286}
+  m_Size: {x: 0.58425194, y: 1.7065053, z: 0.5500256}
+  m_Center: {x: -0.052146226, y: -0.045748115, z: 0.022586286}
 --- !u!114 &6290744391094297358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49e649882592b4844a58174e2e2f1b35, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.275
+      value: -0.705
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49e649882592b4844a58174e2e2f1b35, type: 3}
       propertyPath: m_LocalPosition.z

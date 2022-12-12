@@ -56,6 +56,9 @@ public class PlayerInteractionController : MonoBehaviour
     public AudioSource MainAudioSource;
     public AudioClip openingDoorCabinetAudioClip;
     public AudioClip beakerPickUpAudioClip;
+
+    [Header("FireExtinguisher")]
+    public GameObject fireExt;
     // ---------------------------------------------------------------------------------------------------------------------------//
     // ---------------------------------------------------------------------------------------------------------------------------//
     //
@@ -139,46 +142,60 @@ public class PlayerInteractionController : MonoBehaviour
                     canvasWarningText.text = "INTERACTION_ERROR_2: You can not pick up chemical with barehands! Please get beakers on the cabinet.";
                     if (Input.GetKeyDown("f"))
                     {
-                        _playerAnimControl.holdingAnimation();
-
-                        if (!sighted.gameObject.GetComponent<ObjectBehaviourSystem>().isChemical)
+                        if (!sighted.gameObject.GetComponent<ObjectBehaviourSystem>().isUsableObject)
                         {
-                            sighted.gameObject.GetComponent<Outline>().enabled = false;
-                            sighted.GetComponent<ObjectBehaviourSystem>()._enableGhostMode();
-                            ObjectPickedUp();
+                            _playerAnimControl.holdingAnimation();
+
+                            if (!sighted.gameObject.GetComponent<ObjectBehaviourSystem>().isChemical)
+                            {
+                                sighted.gameObject.GetComponent<Outline>().enabled = false;
+                                sighted.GetComponent<ObjectBehaviourSystem>()._enableGhostMode();
+                                ObjectPickedUp();
 
                             
 
-                            if (sighted.transform.GetChild(0))
-                            {
-                                if (sighted.transform.GetChild(0).childCount > 0)
+                                if (sighted.transform.GetChild(0))
                                 {
-                                    Debug.Log("Picking Up");
-
-                                    sighted.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = true;
-                                    sighted.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().useGravity = false;
-                                    sighted.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = false;
-
-                                    /*
-                                    if (sighted.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
+                                    if (sighted.transform.GetChild(0).childCount > 0)
                                     {
-                                        sighted.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().isTrigger = false;
-                                    }
-                                    */
+                                        Debug.Log("Picking Up");
+
+                                        sighted.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().isKinematic = true;
+                                        sighted.transform.GetChild(0).GetChild(0).GetComponent<Rigidbody>().useGravity = false;
+                                        sighted.transform.GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = false;
+
+                                        /*
+                                        if (sighted.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
+                                        {
+                                            sighted.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().isTrigger = false;
+                                        }
+                                        */
                                     
+                                    }
                                 }
                             }
-
-
-                        }
-                        else
+                            else
+                            {
+                                    // instantiate warning that you cant pick up chemical barehands, you need container
+                                    GameObject _warningCanvas = Instantiate(canvasWarning, hit.transform.position, Quaternion.identity);
+                                    canvasWarningText.text = "INTERACTION_ERROR_2: You can not pick up chemical with barehands! Please get beakers on the cabinet.";
+                                    Destroy(_warningCanvas, 1.5f);
+                            }
+                        } else
                         {
-                            // instantiate warning that you cant pick up chemical barehands, you need container
-                            GameObject _warningCanvas = Instantiate(canvasWarning, hit.transform.position, Quaternion.identity);
-                            canvasWarningText.text = "INTERACTION_ERROR_2: You can not pick up chemical with barehands! Please get beakers on the cabinet.";
-                            Destroy(_warningCanvas, 1.5f);
+                            if(sighted.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Fire Extinguisher")
+                            {
+                                if(fireExt.gameObject.activeSelf == false)
+                                {
+                                    fireExt.SetActive(true);
+                                }
+                                
+                            }
                         }
+                        
                     }
+                    // end
+
                 } else // if may kapit ung player
                 {
                     // if yung kapit is container
