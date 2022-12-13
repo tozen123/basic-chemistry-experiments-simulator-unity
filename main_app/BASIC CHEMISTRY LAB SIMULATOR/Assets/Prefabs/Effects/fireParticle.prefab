@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9219486754200158388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b32a1a29fc8bb2e449b2aea70fc77b94, type: 3}
+  m_Script: {fileID: 11500000, guid: c2dabb9d0575873489ce78b9c1fd11a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &858337415622073114
@@ -4825,7 +4825,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a714da37540a2264094b1abaf044bae3, type: 2}
+  - {fileID: 2100000, guid: ffa231b9c6a5db949846a8139e236409, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4866,7 +4866,7 @@ ParticleSystemRenderer:
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 289301614986012343, guid: 6a503c0f252245b46a51d232a72fd134, type: 3}
+  m_Mesh: {fileID: 289301614986012343, guid: 117d100741e0f5a4881381ce8deb5c92, type: 3}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}

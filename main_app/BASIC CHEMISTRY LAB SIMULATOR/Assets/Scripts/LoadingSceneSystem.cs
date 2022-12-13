@@ -15,7 +15,10 @@ public class LoadingSceneSystem : MonoBehaviour
     {
         StartCoroutine(LoadSceneAsync(sceneId));
     }
-
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
     IEnumerator LoadSceneAsync(int sceneId)
     {
 
