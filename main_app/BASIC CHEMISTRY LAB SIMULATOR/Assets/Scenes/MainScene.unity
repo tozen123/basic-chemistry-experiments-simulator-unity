@@ -2163,6 +2163,7 @@ MonoBehaviour:
   franciumPrefab: {fileID: 4231737654723319, guid: 52217cccccdedac4c9f692b81081593c, type: 3}
   releasePoint: {fileID: 1810262517}
   _playerInteractionController: {fileID: 1052361309}
+  gramsController: {fileID: 1645599867}
 --- !u!4 &136655250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2275824421699802996, guid: 9b3a973e534413b4d8a7beedf3a5dd07, type: 3}
@@ -3620,6 +3621,7 @@ MonoBehaviour:
   isUsableObject: 0
   objectId: KunwareChemical
   objectData: KunwareChemical
+  grams: 0
 --- !u!65 &313804541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4382,7 +4384,7 @@ RectTransform:
   - {fileID: 719602377}
   - {fileID: 75714220}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8476,7 +8478,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 816406699}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1645599867}
+        m_TargetAssemblyTypeName: GramsController, Assembly-CSharp
+        m_MethodName: addGrams
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &816406699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9129,7 +9143,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 905835299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1645599867}
+        m_TargetAssemblyTypeName: GramsController, Assembly-CSharp
+        m_MethodName: reduceGrams
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &905835299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9650,7 +9676,7 @@ Transform:
   m_Children:
   - {fileID: 1195350883}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978969013
 GameObject:
@@ -11160,7 +11186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5318365585895039414, guid: 26a382babfc699443991be27cac3860d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5318365585895039414, guid: 26a382babfc699443991be27cac3860d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11639,7 +11665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 145780518786170830, guid: 089cd25faf7d350479d7ead251a99be8, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 145780518786170830, guid: 089cd25faf7d350479d7ead251a99be8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -18882,8 +18908,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 0.19001412, z: 5.3}
-  m_Center: {x: -6.44, y: 2.234993, z: 0.72}
+  m_Size: {x: 3.5, y: 0.14707756, z: 5.3}
+  m_Center: {x: -6.4400005, y: 2.2564611, z: 0.72}
 --- !u!1 &1433729279
 GameObject:
   m_ObjectHideFlags: 0
@@ -18959,6 +18985,7 @@ MonoBehaviour:
   isUsableObject: 0
   objectId: Container
   objectData: 
+  grams: 0
 --- !u!54 &1433729283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20075,6 +20102,7 @@ MonoBehaviour:
   isUsableObject: 0
   objectId: KunwareChemical
   objectData: KunwareChemical - 1 gram
+  grams: 0
 --- !u!114 &1571603893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20379,7 +20407,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1613422585
 MonoBehaviour:
@@ -20759,6 +20787,7 @@ MonoBehaviour:
   franciumPrefab: {fileID: 4231737654723319, guid: 52217cccccdedac4c9f692b81081593c, type: 3}
   releasePoint: {fileID: 397882635}
   _playerInteractionController: {fileID: 1052361309}
+  gramsController: {fileID: 0}
 --- !u!114 &1628165353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21125,6 +21154,7 @@ GameObject:
   - component: {fileID: 1645599864}
   - component: {fileID: 1645599866}
   - component: {fileID: 1645599865}
+  - component: {fileID: 1645599867}
   m_Layer: 5
   m_Name: Grams
   m_TagString: Untagged
@@ -21248,6 +21278,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645599863}
   m_CullTransparentMesh: 1
+--- !u!114 &1645599867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645599863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d8f457ca87b514d83c5206ac06c753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GramsToAdd: 1
+  text: {fileID: 1645599865}
 --- !u!1 &1649692227
 GameObject:
   m_ObjectHideFlags: 0
@@ -23814,7 +23858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 296375587821364269, guid: 41fec6867dd9ea545b0d096cbea212e0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 296375587821364269, guid: 41fec6867dd9ea545b0d096cbea212e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23930,6 +23974,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4518804}
     m_Modifications:
+    - target: {fileID: 757783045, guid: e97df0282a325ad45a6e79d6247fc0a3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 757783048, guid: e97df0282a325ad45a6e79d6247fc0a3, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 757783048, guid: e97df0282a325ad45a6e79d6247fc0a3, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 757783048, guid: e97df0282a325ad45a6e79d6247fc0a3, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 1693493745, guid: e97df0282a325ad45a6e79d6247fc0a3, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1015.184

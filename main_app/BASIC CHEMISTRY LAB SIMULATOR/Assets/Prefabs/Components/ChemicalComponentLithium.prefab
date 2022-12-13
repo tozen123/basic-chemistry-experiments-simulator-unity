@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6843276884489965087}
   - component: {fileID: 6843276884489965084}
   - component: {fileID: 6843276884489965085}
+  - component: {fileID: -6068149216762194789}
+  - component: {fileID: -8840249923395475450}
   m_Layer: 10
   m_Name: ChemicalComponentLithium
   m_TagString: Untagged
@@ -68,6 +70,7 @@ MonoBehaviour:
   _model: {fileID: 5276426217676996582}
   _offColor: {r: 0, g: 0, b: 0, a: 0}
   isChemical: 1
+  isUsableObject: 0
   objectId: Lithium
   objectData: Lithium - 1 gram
 --- !u!65 &6843276884489965084
@@ -99,6 +102,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-6068149216762194789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843276884489965081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb280f6e2a7b5bc49b4637ef01457e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkParticle: {fileID: 0}
+  smokeParticle: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
+  splashParticle: {fileID: 0}
+  lifeTime: 5
+  fireParticleLithium: {fileID: 9219486754200158388, guid: ae70a64e2cbb1af42b16c64839298ba6, type: 3}
+  sparkParticleFrancium: {fileID: 0}
+  smokeParticleFrancium: {fileID: 0}
+--- !u!135 &-8840249923395475450
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843276884489965081}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6843276884203234146
 PrefabInstance:
   m_ObjectHideFlags: 0

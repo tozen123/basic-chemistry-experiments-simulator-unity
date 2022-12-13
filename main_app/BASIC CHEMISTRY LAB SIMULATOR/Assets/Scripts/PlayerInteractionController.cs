@@ -339,86 +339,10 @@ public class PlayerInteractionController : MonoBehaviour
             {
                 Vector3 placementPosition = new Vector3(Mathf.RoundToInt(hit.point.x), Mathf.RoundToInt(hit.point.y), Mathf.RoundToInt(hit.point.z));
                 _object.transform.position = placementPosition;
-                /*
-                if (onHoldObject.gameObject.GetComponent<ObjectBehaviourSystem>())
-                {
-                    if (onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Beaker")
-                    {
-                        if (onHoldObject.gameObject.transform.GetChild(0).childCount == 1)
-                        {
-                            if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<ObjectBehaviourSystem>())
-                            {
-                                if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
-                                {
-                                    onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().enabled = false;
-                                }
-                            }
-                        } else if (onHoldObject.gameObject.transform.GetChild(0).childCount == 2)
-                        {
-                            if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<ObjectBehaviourSystem>())
-                            {
-                                if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
-                                {
-                                    onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().enabled = false;
-                                }
-                            }
-
-                            if (onHoldObject.transform.GetChild(0).GetChild(1).gameObject)
-                            {
-                                if (onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<ObjectBehaviourSystem>())
-                                {
-                                    if (onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<SphereCollider>())
-                                    {
-                                        onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<SphereCollider>().enabled = false;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                */
+              
                 if (Input.GetKeyDown("f") || Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("OBJECT PLACED");
-                    /*
-                    if (onHoldObject.gameObject.GetComponent<ObjectBehaviourSystem>())
-                    {
-                        
-                        if (onHoldObject.GetComponent<ObjectBehaviourSystem>().objectId == "Beaker")
-                        {
-                            if (onHoldObject.gameObject.transform.GetChild(0).childCount == 1)
-                            {
-                                if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<ObjectBehaviourSystem>())
-                                {
-                                    if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
-                                    {
-                                        onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().enabled = true;
-                                    }
-                                }
-                            } else if (onHoldObject.gameObject.transform.GetChild(0).childCount == 2)
-                            {
-                                if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<ObjectBehaviourSystem>())
-                                {
-                                    if (onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>())
-                                    {
-                                        onHoldObject.transform.GetChild(0).GetChild(0).GetComponent<SphereCollider>().enabled = true;
-                                    }
-                                }
-
-                                if (onHoldObject.transform.GetChild(0).GetChild(1).gameObject)
-                                {
-                                    if (onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<ObjectBehaviourSystem>())
-                                    {
-                                        if (onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<SphereCollider>())
-                                        {
-                                            onHoldObject.transform.GetChild(0).GetChild(1).GetComponent<SphereCollider>().enabled = true;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                     */
                     MainAudioSource.PlayOneShot(beakerPickUpAudioClip, 0.35f);
                     _playerAnimControl.notHoldingAnimation();
 
