@@ -70,8 +70,10 @@ MonoBehaviour:
   _model: {fileID: 4832585845147796953}
   _offColor: {r: 0, g: 0, b: 0, a: 0}
   isChemical: 1
+  isUsableObject: 0
   objectId: Sodium
   objectData: Sodium - 1 gram
+  grams: 0
 --- !u!65 &6111770182196734801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -116,7 +118,10 @@ MonoBehaviour:
   sparkParticle: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
   smokeParticle: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
   splashParticle: {fileID: 763267279602489683, guid: 5cd1e99acd0259b4abbf7e0a703b2b47, type: 3}
-  lifeTime: 5
+  fireParticleLithium: {fileID: 9219486754200158388, guid: e90a792e072bb10488e8c855799a6f0a, type: 3}
+  sparkParticleFrancium: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
+  smokeParticleFrancium: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
+  sparksfx: {fileID: 9063821174670866171, guid: 6f88b2d39b6f20a46a65dfaff686215f, type: 3}
 --- !u!135 &6689051888816980447
 SphereCollider:
   m_ObjectHideFlags: 0

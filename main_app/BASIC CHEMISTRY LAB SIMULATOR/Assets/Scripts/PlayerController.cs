@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirection;
     Rigidbody rb;
 
+    public AudioSource FoostepSource;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,6 +30,14 @@ public class PlayerController : MonoBehaviour
         MyInput();
         ControlDrag();
 
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        {
+            FoostepSource.Play();
+        }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        {
+            FoostepSource.Stop();
+        }
     }
     void ControlDrag()
     {
@@ -50,4 +59,5 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddForce(moveDirection.normalized * moveSpeed * movementMultiplier, ForceMode.Acceleration);
     }
+    
 }

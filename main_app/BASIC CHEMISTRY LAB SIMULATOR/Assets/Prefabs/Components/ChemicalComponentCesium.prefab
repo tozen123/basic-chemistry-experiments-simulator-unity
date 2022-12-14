@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3130987182099143129}
   - component: {fileID: 3130987182099143132}
   - component: {fileID: 1151215786}
+  - component: {fileID: -3917442718738816040}
   m_Layer: 10
   m_Name: ChemicalComponentCesium
   m_TagString: Untagged
@@ -69,8 +70,10 @@ MonoBehaviour:
   _model: {fileID: 4373582245478076552}
   _offColor: {r: 0, g: 0, b: 0, a: 0}
   isChemical: 1
+  isUsableObject: 0
   objectId: Cesium
   objectData: Cesium - 1 gram
+  grams: 0
 --- !u!135 &3130987182099143129
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -113,6 +116,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 0.14, z: 0}
+--- !u!114 &-3917442718738816040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3130987182099143131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb280f6e2a7b5bc49b4637ef01457e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkParticle: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
+  smokeParticle: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
+  splashParticle: {fileID: 763267279602489683, guid: 5cd1e99acd0259b4abbf7e0a703b2b47, type: 3}
+  fireParticleLithium: {fileID: 9219486754200158388, guid: e90a792e072bb10488e8c855799a6f0a, type: 3}
+  sparkParticleFrancium: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
+  smokeParticleFrancium: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
+  sparksfx: {fileID: 9063821174670866171, guid: 6f88b2d39b6f20a46a65dfaff686215f, type: 3}
 --- !u!1001 &3130987180920376332
 PrefabInstance:
   m_ObjectHideFlags: 0

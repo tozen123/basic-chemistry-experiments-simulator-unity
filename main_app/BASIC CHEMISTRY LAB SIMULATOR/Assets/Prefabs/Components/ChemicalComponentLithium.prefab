@@ -73,6 +73,7 @@ MonoBehaviour:
   isUsableObject: 0
   objectId: Lithium
   objectData: Lithium - 1 gram
+  grams: 0
 --- !u!65 &6843276884489965084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -114,13 +115,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb280f6e2a7b5bc49b4637ef01457e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sparkParticle: {fileID: 0}
+  sparkParticle: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
   smokeParticle: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
-  splashParticle: {fileID: 0}
-  lifeTime: 5
-  fireParticleLithium: {fileID: 9219486754200158388, guid: ae70a64e2cbb1af42b16c64839298ba6, type: 3}
-  sparkParticleFrancium: {fileID: 0}
-  smokeParticleFrancium: {fileID: 0}
+  splashParticle: {fileID: 763267279602489683, guid: 5cd1e99acd0259b4abbf7e0a703b2b47, type: 3}
+  fireParticleLithium: {fileID: 9219486754200158388, guid: e90a792e072bb10488e8c855799a6f0a, type: 3}
+  sparkParticleFrancium: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
+  smokeParticleFrancium: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
+  sparksfx: {fileID: 9063821174670866171, guid: 6f88b2d39b6f20a46a65dfaff686215f, type: 3}
 --- !u!135 &-8840249923395475450
 SphereCollider:
   m_ObjectHideFlags: 0

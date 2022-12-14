@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1842858573928020725}
   - component: {fileID: 1842858573928020726}
   - component: {fileID: 1842858573928020727}
+  - component: {fileID: 8399823175735268284}
   m_Layer: 10
   m_Name: ChemicalComponentPotassium
   m_TagString: Untagged
@@ -68,8 +69,10 @@ MonoBehaviour:
   _model: {fileID: 1032084876646781535}
   _offColor: {r: 0, g: 0, b: 0, a: 0}
   isChemical: 0
+  isUsableObject: 0
   objectId: Potassium
   objectData: Potassium - 1 gram
+  grams: 0
 --- !u!54 &1842858573928020726
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -99,6 +102,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2692205, y: 0.094345376, z: 0.34826678}
   m_Center: {x: -0.018037498, y: 0.05644694, z: 0.050558805}
+--- !u!114 &8399823175735268284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842858573928020731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb280f6e2a7b5bc49b4637ef01457e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkParticle: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
+  smokeParticle: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
+  splashParticle: {fileID: 763267279602489683, guid: 5cd1e99acd0259b4abbf7e0a703b2b47, type: 3}
+  fireParticleLithium: {fileID: 9219486754200158388, guid: e90a792e072bb10488e8c855799a6f0a, type: 3}
+  sparkParticleFrancium: {fileID: 5550007862960934337, guid: 07b3ab4e23c8e804b949a59a34fd4e11, type: 3}
+  smokeParticleFrancium: {fileID: 3086358729750749299, guid: 3c10621f4cc628947b887da83249613e, type: 3}
+  sparksfx: {fileID: 9063821174670866171, guid: 6f88b2d39b6f20a46a65dfaff686215f, type: 3}
 --- !u!1001 &1842858573960777435
 PrefabInstance:
   m_ObjectHideFlags: 0

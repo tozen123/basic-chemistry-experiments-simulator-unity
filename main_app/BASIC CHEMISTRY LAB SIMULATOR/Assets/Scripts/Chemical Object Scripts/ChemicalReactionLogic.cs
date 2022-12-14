@@ -16,6 +16,8 @@ public class ChemicalReactionLogic : MonoBehaviour
 
     public GameObject sparkParticleFrancium;
     public GameObject smokeParticleFrancium;
+
+    public AudioSource sparksfx;
     void Start()
     {
         
@@ -74,6 +76,7 @@ public class ChemicalReactionLogic : MonoBehaviour
 
             if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Lithium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // LITHIUM
             {
+                sparksfx.Play();
                 Debug.Log("REACTED Lithium!");
                 float chemicalWeight = this.gameObject.GetComponent<ObjectBehaviourSystem>().grams;
 
@@ -86,6 +89,7 @@ public class ChemicalReactionLogic : MonoBehaviour
             }
             else if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Sodium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // SODIUM
             {
+                sparksfx.Play();
                 Debug.Log("REACTED Sodium!");
                 float chemicalWeight = this.gameObject.GetComponent<ObjectBehaviourSystem>().grams;
 
@@ -95,6 +99,7 @@ public class ChemicalReactionLogic : MonoBehaviour
                 Destroy(this.gameObject, lifeTime * chemicalWeight);  // Multiplying the chemicalweight to the lifetime, so that if the weight is 1 the time range of the reaction will be multiplied to the default life time.
             } else if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Francium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // FRANCIUM
             {
+                sparksfx.Play();
                 Debug.Log("REACTED Francium!");
                 float chemicalWeight = this.gameObject.GetComponent<ObjectBehaviourSystem>().grams;
 

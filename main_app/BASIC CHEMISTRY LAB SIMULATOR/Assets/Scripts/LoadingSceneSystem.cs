@@ -10,7 +10,7 @@ public class LoadingSceneSystem : MonoBehaviour
     public Image LoadingBarFill;
     public float speed;
 
-
+    public GameObject aboutus;
     public void LoadScene(int sceneId)
     {
         StartCoroutine(LoadSceneAsync(sceneId));
@@ -33,5 +33,13 @@ public class LoadingSceneSystem : MonoBehaviour
 
             yield return null;
         }
+    }
+    public void back()
+    {
+        aboutus.SetActive(false);
+    }
+    public void openabout()
+    {
+        aboutus.SetActive(true);
     }
 }
