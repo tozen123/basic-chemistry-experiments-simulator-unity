@@ -12,6 +12,8 @@ public class QuickSettings : MonoBehaviour
     public GameObject postProcessing;
     public GameObject Terrain;
     public GameObject effects;
+
+    public GameObject howto;
     void Start()
     {
         startUp.SetActive(true);
@@ -40,7 +42,15 @@ public class QuickSettings : MonoBehaviour
 
     public void Continue()
     {
-        startUp.SetActive(false);
+        if(howto.activeSelf == true)
+        {
+            howto.SetActive(false);
+        }
+        if (startUp.activeSelf == true)
+        {
+            startUp.SetActive(false);
+        }
+        
         if(pausable.activeSelf == true)
         {
             pausable.SetActive(false);
@@ -66,5 +76,10 @@ public class QuickSettings : MonoBehaviour
     public void PP(bool state)
     {
         postProcessing.SetActive(state);
+    }
+    public void how()
+    {
+        startUp.SetActive(false);
+        howto.SetActive(true);
     }
 }
