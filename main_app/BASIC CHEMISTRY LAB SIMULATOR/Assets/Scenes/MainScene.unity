@@ -1127,7 +1127,6 @@ GameObject:
   m_Component:
   - component: {fileID: 36686704}
   - component: {fileID: 36686705}
-  - component: {fileID: 36686706}
   m_Layer: 0
   m_Name: _postprocessing
   m_TagString: Untagged
@@ -1166,18 +1165,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &36686706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36686703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20ddc21c864d50e48a40513724aa68a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &43111933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,7 +3041,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 211382040}
-  - component: {fileID: 211382041}
   m_Layer: 0
   m_Name: _tipWindow
   m_TagString: Untagged
@@ -3070,24 +3056,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211382039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 367.0558, y: 248.04344, z: 45.194794}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &211382041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211382039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8409ae793edc03f45b485c6cda28d71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &230105555
 GameObject:
   m_ObjectHideFlags: 0
@@ -8804,7 +8778,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 6.4285e-40, w: -1.309e-42}
+  m_BoundingSphereOverride: {x: 2.571394e-39, y: 9.1835e-41, z: 1.8e-43, w: 26.69313}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
