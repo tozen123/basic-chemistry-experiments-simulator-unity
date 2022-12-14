@@ -4,10 +4,10 @@ Basic Chemistry Experiments Simulator is a simulation of basic chemistry experim
 
 # About The Developers:
   - Christian Serwelas            - Lead Developer
-  - Wyndel Albos                  - Assistant Developer, Programmer, Quality Assurance and Researcher
-  - Kirby Ann Delos Reyes         - Artist, Designer, Quality Assurance and Researcher
-  - Marvin Glyn Peña              - Lead Artist
-  - Apple Kimberly Calvario       - Assistant Developer, Programmer, Quality Assurance and Researcher
+  - Wyndel Albos                  - Programmer, Quality Assurance and Researcher
+  - Kirby Ann Delos Reyes         - Artist, Designer and Researcher
+  - Marvin Glyn Peña              - Lead Artist, Quality Assurance
+  - Apple Kimberly Calvario       - Programmer, Quality Assurance and Researcher
 
 # Build Version Download Link
 https://drive.google.com/file/d/1Nb0mJYbqCyPVqYq9DaG52QZZg59HZewe/view?usp=share_link
