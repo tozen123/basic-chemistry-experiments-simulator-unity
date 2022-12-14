@@ -14,6 +14,7 @@ public class ObjectBehaviourSystem : MonoBehaviour
     public string objectId;
     public string objectData;
 
+    public float grams;
     private void Start()
     {
         _offColor = _model.material.color;
@@ -21,6 +22,8 @@ public class ObjectBehaviourSystem : MonoBehaviour
 
     private void Update()
     {
+        objectData = objectId + " - " + grams.ToString("0") + " gram(s)";
+
         if (this.GetComponent<WaterBehaviourSystem>())
         {
             objectData = "Water - " + this.GetComponent<WaterBehaviourSystem>().waterVolume + "Liter(s)";

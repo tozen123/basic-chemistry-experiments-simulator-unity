@@ -116,6 +116,7 @@ MonoBehaviour:
   _model: {fileID: 3817948058608062359}
   _offColor: {r: 0, g: 0, b: 0, a: 0}
   isChemical: 0
+  isUsableObject: 0
   objectId: Beaker
   objectData: 
 --- !u!114 &2539333264107572186
@@ -158,6 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2539333264126693651}
+  - component: {fileID: 2235703497430975982}
   m_Layer: 10
   m_Name: rootModel
   m_TagString: Untagged
@@ -180,6 +182,19 @@ Transform:
   m_Father: {fileID: 2539333264107572166}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2235703497430975982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539333264126693650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.45900595, y: 0.044747017, z: 0.42091036}
+  m_Center: {x: 0.009371251, y: 0.034582254, z: -0.008545548}
 --- !u!1001 &1150681495305387411
 PrefabInstance:
   m_ObjectHideFlags: 0
