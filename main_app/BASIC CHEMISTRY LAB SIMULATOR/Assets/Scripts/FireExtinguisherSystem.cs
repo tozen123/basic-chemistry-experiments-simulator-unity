@@ -5,7 +5,10 @@ using UnityEngine;
 public class FireExtinguisherSystem : MonoBehaviour
 {
     public GameObject extinguisherParticle;
-
+    private void Start()
+    {
+        extinguisherParticle.GetComponent<ParticleSystem>().Stop();
+    }
     void Update()
     {
         if (Input.GetKeyDown("f"))

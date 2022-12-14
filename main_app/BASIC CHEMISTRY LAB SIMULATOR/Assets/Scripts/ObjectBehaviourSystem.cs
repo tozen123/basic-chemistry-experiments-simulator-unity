@@ -22,7 +22,14 @@ public class ObjectBehaviourSystem : MonoBehaviour
 
     private void Update()
     {
-        objectData = objectId + " - " + grams.ToString("0") + " gram(s)";
+        if (!isUsableObject)
+        {
+            objectData = objectId + " - " + grams.ToString("0") + " gram(s)";
+        } else
+        {
+            objectData = objectId + "(Lab Equipment)";
+        }
+        
 
         if (this.GetComponent<WaterBehaviourSystem>())
         {
