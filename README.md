@@ -57,3 +57,13 @@ Major Update: December 8, 2022
 Minor Update: December 12, 2022
   - Small Improvement to UI's
   - Adding Fire Extinguisher Function
+  
+ Major Update: December 13, 2022
+  - Rollback version after the the source project file being corrupted due to errors
+  
+ Major Update: December 14, 2022
+  - Polishing
+  - adding more chemical logics 
+  - adding more of effects
+  - performance update
+  - UI overhaul
