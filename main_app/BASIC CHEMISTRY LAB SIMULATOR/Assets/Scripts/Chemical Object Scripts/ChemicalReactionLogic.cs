@@ -36,21 +36,21 @@ public class ChemicalReactionLogic : MonoBehaviour
         fireParticleGO.transform.GetChild(0).gameObject.transform.localScale = new Vector3(fireSizing, fireSizing, fireSizing); // decrease Size
 
         fireParticleGO.transform.position = Vector3.MoveTowards(fireParticleGO.transform.position, transform.position, 6 * Time.deltaTime);
-        Destroy(fireParticleGO, lifeTime);
+        Destroy(fireParticleGO, lifeTime * basedLifetime);
     }
 
     private void createSmoke(float basedLifetime)
     {
         GameObject smokeParticleGO = Instantiate(smokeParticle, transform.position, Quaternion.identity);
         smokeParticleGO.transform.position = Vector3.MoveTowards(smokeParticleGO.transform.position, transform.position, 6 * Time.deltaTime);
-        Destroy(smokeParticleGO, lifeTime);
+        Destroy(smokeParticleGO, lifeTime * basedLifetime);
     }
 
     private void createSparks(float basedLifetime)
     {
         GameObject sparkParticleGO = Instantiate(sparkParticle, transform.position, Quaternion.identity);
         sparkParticleGO.transform.position = Vector3.MoveTowards(sparkParticleGO.transform.position, transform.position, 6 * Time.deltaTime);
-        Destroy(sparkParticleGO, lifeTime);
+        Destroy(sparkParticleGO, lifeTime * basedLifetime);
 
     }
 
@@ -61,7 +61,7 @@ public class ChemicalReactionLogic : MonoBehaviour
         splashParticleGO.transform.GetChild(0).gameObject.transform.localScale = new Vector3(baseSizing, baseSizing, baseSizing); // decrease Size
 
         splashParticleGO.transform.position = Vector3.MoveTowards(splashParticleGO.transform.position, transform.position, 6 * Time.deltaTime);
-        Destroy(splashParticleGO, lifeTime);
+        Destroy(splashParticleGO, lifeTime * basedLifetime);
     }
 
     private void OnTriggerEnter(Collider other)
