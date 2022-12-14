@@ -13,9 +13,12 @@ Basic Chemistry Experiments Simulator is a simulation of basic chemistry experim
 https://drive.google.com/file/d/1Nb0mJYbqCyPVqYq9DaG52QZZg59HZewe/view?usp=share_link
 
 # Source Project
+
 To successfully run this Source Project File. Must install the following assets:
-1. QuickOutline [Free]
-2. TextMeshPro [Built-In]
+1. Unity Hub with Unity Editor Version 2020.38.f1 or Up. 
+   After opening the source code project, you must install the 2 & 3 to the project file and add it to the components that need the following assets.
+2. QuickOutline [Free]
+3. TextMeshPro [Built-In]
 
 # UPDATE LOGS
 
