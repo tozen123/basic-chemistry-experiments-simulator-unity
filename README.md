@@ -52,3 +52,18 @@ Minor Update: December 7, 2022
 Major Update: December 8, 2022
   - Bug fixing
   - Adding functions to settings
+  
+Minor Update: December 10, 2022
+  - Adjustments to UI's
+  
+Major Update: December 13, 2022
+  - Rollback to Version 0.2 after the version 0.5 project file being corrupted for some unknown reasons.
+  - Reinstall new UI, Logics and more.
+  
+ Major Update: December 14, 2022
+  - Further polishing by the team
+  - Logic Overhaul
+  - UI Overhaul
+  - Recoding some parts due to the rollback
+  - Release version 0.6
+  
