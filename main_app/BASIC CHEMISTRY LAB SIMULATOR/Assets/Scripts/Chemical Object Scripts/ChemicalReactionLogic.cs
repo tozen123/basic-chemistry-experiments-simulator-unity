@@ -8,7 +8,10 @@ public class ChemicalReactionLogic : MonoBehaviour
     public GameObject smokeParticle;
     public GameObject splashParticle;
 
-    public float lifeTime = 2f; // 1 gram reaction time
+    private float lifeTime = 2f; // 1 gram reaction time
+    //TIME SETS
+    //DEFAULT IS 2
+
     public GameObject fireParticleLithium;
 
     public GameObject sparkParticleFrancium;
@@ -26,7 +29,7 @@ public class ChemicalReactionLogic : MonoBehaviour
 
     }
 
-    private void createFire(float fireSizing)
+    private void createFire(float fireSizing, float basedLifetime)
     {
         //special
         GameObject fireParticleGO = Instantiate(fireParticleLithium, transform.position, Quaternion.identity);
@@ -36,14 +39,14 @@ public class ChemicalReactionLogic : MonoBehaviour
         Destroy(fireParticleGO, lifeTime);
     }
 
-    private void createSmoke()
+    private void createSmoke(float basedLifetime)
     {
         GameObject smokeParticleGO = Instantiate(smokeParticle, transform.position, Quaternion.identity);
         smokeParticleGO.transform.position = Vector3.MoveTowards(smokeParticleGO.transform.position, transform.position, 6 * Time.deltaTime);
         Destroy(smokeParticleGO, lifeTime);
     }
 
-    private void createSparks()
+    private void createSparks(float basedLifetime)
     {
         GameObject sparkParticleGO = Instantiate(sparkParticle, transform.position, Quaternion.identity);
         sparkParticleGO.transform.position = Vector3.MoveTowards(sparkParticleGO.transform.position, transform.position, 6 * Time.deltaTime);
@@ -51,7 +54,7 @@ public class ChemicalReactionLogic : MonoBehaviour
 
     }
 
-    private void createExplosion(float baseSizing)
+    private void createExplosion(float baseSizing, float basedLifetime)
     {
         //special
         GameObject splashParticleGO = Instantiate(splashParticle, transform.position, Quaternion.identity);
@@ -65,48 +68,72 @@ public class ChemicalReactionLogic : MonoBehaviour
     {
         if (other.gameObject.GetComponent<ObjectBehaviourSystem>())
         {
+            // Adjustment Logical Overhaul
+            // The Grams or weight must be affecting the result of the chemical reaction
+            // must get the grams and apply to the effects created by kirby
+
             if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Lithium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // LITHIUM
             {
                 Debug.Log("REACTED Lithium!");
-                createSmoke();
-                createFire(0.1f);
-                Destroy(this.gameObject, lifeTime);
+                float chemicalWeight = this.gameObject.GetComponent<ObjectBehaviourSystem>().grams;
 
-            }else if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Sodium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // SODIUM
+                Debug.Log("REACTED LITHIUM DATASETS | GRAMS: " + chemicalWeight);
+
+                createSmoke(lifeTime * chemicalWeight);
+                createFire(0.1f, lifeTime * chemicalWeight);
+                Destroy(this.gameObject, lifeTime * chemicalWeight); // Multiplying the chemicalweight to the lifetime, so that if the weight is 1 the time range of the reaction will be multiplied to the default life time.
+
+            }
+            else if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Sodium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // SODIUM
             {
                 Debug.Log("REACTED Sodium!");
-                createSmoke();
-                createSparks();
-                Destroy(this.gameObject, lifeTime);
+                float chemicalWeight = this.gameObject.GetComponent<ObjectBehaviourSystem>().grams;
+
+                Debug.Log("REACTED SODIUM DATASETS | GRAMS: " + chemicalWeight);
+                createSmoke(lifeTime * chemicalWeight);
+                createSparks(lifeTime * chemicalWeight);
+                Destroy(this.gameObject, lifeTime * chemicalWeight);  // Multiplying the chemicalweight to the lifetime, so that if the weight is 1 the time range of the reaction will be multiplied to the default life time.
             } else if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Francium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // FRANCIUM
             {
                 Debug.Log("REACTED Francium!");
-                createSmoke();
-                createSparks();
-                createFire(0.3f);
+                float chemicalWeight = this.gameObject.GetComponent<ObjectBehaviourSystem>().grams;
 
-                Destroy(this.gameObject, lifeTime);
+                Debug.Log("REACTED Francium DATASETS | GRAMS: " + chemicalWeight);
+                createSmoke(lifeTime * chemicalWeight);
+                createSparks(lifeTime * chemicalWeight);
+                createFire(0.3f, lifeTime * chemicalWeight);
+
+                Destroy(this.gameObject, lifeTime * chemicalWeight);  // Multiplying the chemicalweight to the lifetime, so that if the weight is 1 the time range of the reaction will be multiplied to the default life time.
             } else if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Cesium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // Cesium
             {
                 Debug.Log("REACTED Cesium!");
-                createSmoke();
+                float chemicalWeight = this.gameObject.GetComponent<ObjectBehaviourSystem>().grams;
+
+                Debug.Log("REACTED Cesium DATASETS | GRAMS: " + chemicalWeight);
+                createSmoke(lifeTime * chemicalWeight);
 
 
-                Destroy(this.gameObject, lifeTime);
+                Destroy(this.gameObject, lifeTime * chemicalWeight);  // Multiplying the chemicalweight to the lifetime, so that if the weight is 1 the time range of the reaction will be multiplied to the default life time.
             } else if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Potassium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // Potassium
             {
                 Debug.Log("REACTED Potassium!");
-                createSmoke();
+                float chemicalWeight = this.gameObject.GetComponent<ObjectBehaviourSystem>().grams;
+
+                Debug.Log("REACTED Potassium DATASETS | GRAMS: " + chemicalWeight);
+                createSmoke(lifeTime * chemicalWeight);
 
 
-                Destroy(this.gameObject, lifeTime);
+                Destroy(this.gameObject, lifeTime * chemicalWeight);  // Multiplying the chemicalweight to the lifetime, so that if the weight is 1 the time range of the reaction will be multiplied to the default life time.
             } else if (this.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Rubidium" && other.gameObject.GetComponent<ObjectBehaviourSystem>().objectId == "Water") // Rubidium
             {
                 Debug.Log("REACTED Rubidium!");
-                createSmoke();
+                float chemicalWeight = this.gameObject.GetComponent<ObjectBehaviourSystem>().grams;
+
+                Debug.Log("REACTED Rubidium DATASETS | GRAMS: " + chemicalWeight);
+                createSmoke(lifeTime * chemicalWeight);
 
 
-                Destroy(this.gameObject, lifeTime);
+                Destroy(this.gameObject, lifeTime * chemicalWeight);  // Multiplying the chemicalweight to the lifetime, so that if the weight is 1 the time range of the reaction will be multiplied to the default life time.
             }
         }
     }
